@@ -14,6 +14,8 @@
             <span></span>
             <span></span>
         </div>
+        <button class="hamburguer" aria-label="Abrir menú">☰</button>
+        
         <nav>
             <ul>
                 <li><a href="/portfolio/index.html">Inicio</a></li>
@@ -51,5 +53,10 @@
             </div>
         </footer>
     </div>
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', function () {
+            document.querySelector('nav ul').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

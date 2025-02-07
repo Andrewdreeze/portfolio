@@ -7,20 +7,21 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Ocupa el 100% del alto de la pantalla */
+    min-height: 100vh;
 }
 
 .navbar {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem; 
+    padding: 1rem 2rem;
     background-color: #1a1a1a;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
 }
+
 nav ul {
     list-style: none;
     display: flex;
@@ -36,39 +37,67 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1rem; 
+    font-size: 1rem;
 }
-/* Media Queries para pantallas pequeñas (móviles) */
+
+/* Botón de hamburguesa (oculto por defecto) */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Media Queries para pantallas pequeñas (≤ 768px) */
 @media (max-width: 768px) {
     .navbar {
-        padding: 0.5rem 1rem; /* Reducimos el padding en móviles */
+        padding: 0.5rem 1rem;
     }
 
+    /* Muestra el botón de hamburguesa */
+    .hamburger {
+        display: block;
+    }
+
+    /* Oculta el menú en pantallas pequeñas */
     nav ul {
-        flex-direction: column; /* Cambiamos a columna en móviles */
-        align-items: center;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #1a1a1a;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Muestra el menú cuando está activo */
+    nav ul.active {
+        display: flex;
     }
 
     nav ul li {
-        margin: 0.5rem 0; /* Reducimos el margen entre elementos */
+        margin: 0.5rem 0;
     }
 
     nav ul li a {
-        font-size: 0.9rem; /* Reducimos el tamaño de la fuente */
+        font-size: 0.9rem;
     }
 }
 
-/* Media Queries para pantallas muy pequeñas (ej: smartphones pequeños) */
+/* Media Queries para pantallas muy pequeñas (≤ 480px) */
 @media (max-width: 480px) {
     .navbar {
-        padding: 0.5rem; /* Reducimos aún más el padding */
+        padding: 0.5rem;
     }
 
     nav ul li {
-        margin: 0.3rem 0; /* Reducimos el margen entre elementos */
+        margin: 0.3rem 0;
     }
 
     nav ul li a {
-        font-size: 0.8rem; /* Reducimos el tamaño de la fuente */
+        font-size: 0.8rem;
     }
 }
