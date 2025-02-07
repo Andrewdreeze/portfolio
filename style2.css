@@ -13,7 +13,7 @@ body {
 
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 1rem 2rem;
     background-color: #1a1a1a;
@@ -131,26 +131,28 @@ footer {
     color: #ff69b4;
 }
 
+/* Botón de hamburguesa (oculto por defecto) */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
 /* Media Queries para pantallas pequeñas (≤ 768px) */
 @media (max-width: 768px) {
-    .content {
-        flex-direction: column;
+    .navbar {
+        padding: 0.5rem 1rem;
     }
 
-    .text {
-        max-width: 100%;
-        text-align: center;
-    }
-
-    .image img {
-        max-width: 300px;
-    }
-
-    /* Estilos para el menú desplegable */
+    /* Muestra el botón de hamburguesa */
     .hamburger {
         display: block;
     }
 
+    /* Oculta el menú en pantallas pequeñas */
     nav ul {
         display: none;
         flex-direction: column;
@@ -162,26 +164,31 @@ footer {
         text-align: center;
     }
 
+    /* Muestra el menú cuando está activo */
     nav ul.active {
         display: flex;
-    }
-
-    nav ul li {
-        margin: 1rem 0;
-    }
-}
-
-/* Media Queries para pantallas muy pequeñas (≤ 480px) */
-@media (max-width: 480px) {
-    .navbar {
-        padding: 0.5rem 1rem;
     }
 
     nav ul li {
         margin: 0.5rem 0;
     }
 
-    .btn-primary, .btn-secondary {
+    nav ul li a {
+        font-size: 0.9rem;
+    }
+}
+
+/* Media Queries para pantallas muy pequeñas (≤ 480px) */
+@media (max-width: 480px) {
+    .navbar {
         padding: 0.5rem;
+    }
+
+    nav ul li {
+        margin: 0.3rem 0;
+    }
+
+    nav ul li a {
+        font-size: 0.8rem;
     }
 }
