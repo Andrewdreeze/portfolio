@@ -15,10 +15,10 @@ body {
     align-items: center;
     padding: 10px 20px;
     background-color: #1a1a1a;
-    position: fixed; /* Fija el navbar en la parte superior */
+    position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000; /* Asegura que el navbar esté por encima de otros elementos */
+    z-index: 1000
 }
 
 nav ul {
@@ -85,22 +85,22 @@ footer {
 }
 
 .footer-links a {
-    color: #ffffff; /* Cambia el color de los enlaces */
+    color: #ffffff;
     text-decoration: none;
     margin: 0 10px;
 }
 
 .footer-links a:hover {
-    color: #ffffff; /* Cambia el color al pasar el mouse sobre los enlaces */
+    color: #ffffff;
 }
 
 .social-icons a {
-    color: #ffffff; /* Cambia el color de los iconos */
+    color: #ffffff;
     font-size: 1.2em;
     margin: 0 10px;
 }
 
 .social-icons a:hover {
-    color: #ff69b4; /* Cambia el color al pasar el mouse sobre los iconos */
+    color: #ff69b4;
 }
 
