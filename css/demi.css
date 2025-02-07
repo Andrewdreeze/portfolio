@@ -37,3 +37,37 @@ nav ul li a {
     text-decoration: none;
     font-size: 1rem; 
 }
+/* Media Queries para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.5rem 1rem; /* Reducimos el padding en móviles */
+    }
+
+    nav ul {
+        flex-direction: column; /* Cambiamos a columna en móviles */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0; /* Reducimos el margen entre elementos */
+    }
+
+    nav ul li a {
+        font-size: 0.9rem; /* Reducimos el tamaño de la fuente */
+    }
+}
+
+/* Media Queries para pantallas muy pequeñas (ej: smartphones pequeños) */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0.5rem; /* Reducimos aún más el padding */
+    }
+
+    nav ul li {
+        margin: 0.3rem 0; /* Reducimos el margen entre elementos */
+    }
+
+    nav ul li a {
+        font-size: 0.8rem; /* Reducimos el tamaño de la fuente */
+    }
+}
