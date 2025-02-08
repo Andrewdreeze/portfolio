@@ -40,6 +40,16 @@ nav ul li a {
     font-size: 1rem;
 }
 
+.content {
+    flex: 1; /* Hace que el contenido crezca y empuje el footer hacia abajo */
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
 /* Media Queries para pantallas pequeñas (≤ 768px) */
 @media (max-width: 768px) {
     .navbar {
