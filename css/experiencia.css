@@ -83,6 +83,7 @@ h1 {
     .navbar {
         padding: 0.5rem 1rem; /* Reduce el padding en móviles */
         flex-direction: row; /* Cambia la dirección del flexbox a fila */
+        align-items: center; /* Alinea los elementos al centro verticalmente */
     }
 
     nav ul {
@@ -91,7 +92,7 @@ h1 {
     }
 
     nav ul li {
-        margin: 0 0.8rem; /* Ajusta el margen entre elementos */
+        margin: 0.5rem 0; /* Ajusta el margen entre elementos */
     }
 
     .display-3 {
