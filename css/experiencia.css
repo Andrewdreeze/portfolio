@@ -13,7 +13,7 @@ body {
 
 .navbar {
     display: flex;
-    justify-content: center; /* Alinea el logo y el menú */
+    justify-content: space-between; /* Alinea el logo a la izquierda y el menú a la derecha */
     align-items: center;
     padding: 1rem 2rem;
     background-color: #1a1a1a;
@@ -21,6 +21,11 @@ body {
     top: 0;
     width: 100%;
     z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
 }
 
 nav ul {
@@ -49,31 +54,64 @@ h1 {
 
 .justificado {
     text-align: justify; /* Justifica el texto */
-    width: 500px; /* Ancho del contenedor (ajusta según necesites) */
+    width: 80%; /* Ancho del contenedor (ajusta según necesites) */
     margin: 20px auto; /* Centra el párrafo en la pantalla */
     line-height: 1.6; /* Espaciado entre líneas para mejorar la legibilidad */
     font-family: Arial, sans-serif; /* Fuente clara */
+}
+
+.custom-list {
+    list-style-type: none; /* Elimina el estilo de lista por defecto */
+    padding-left: 0; /* Elimina el padding izquierdo por defecto */
+}
+
+.custom-list li {
+    position: relative;
+    padding-left: 20px; /* Espacio para el marcador personalizado */
+    margin-bottom: 10px;
+}
+
+.custom-list li::before {
+    content: ""; /* Crea un pseudo-elemento antes del texto */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: #333; /* Color del marcador */
+    border-radius: 50%; /* Forma circular */
 }
 
 /* Media Queries para pantallas pequeñas (≤ 768px) */
 @media (max-width: 768px) {
     .navbar {
         padding: 0.5rem 1rem; /* Reduce el padding en móviles */
+        flex-direction: column; /* Cambia la dirección del flexbox a columna */
+        align-items: flex-start; /* Alinea los elementos al inicio */
     }
 
-    nav ul li {
-        margin: 0 0.8rem; /* Reduce el margen entre elementos */
+    nav ul {
+        display: none; /* Oculta el menú en pantallas pequeñas */
     }
 
-    nav ul li a {
-        font-size: 0.9rem; /* Reduce el tamaño de la fuente */
+    .logo {
+        margin-bottom: 1rem; /* Agrega espacio debajo del logo */
+    }
+
+    h1 {
+        font-size: 3rem; /* Reduce el tamaño del título */
+    }
+
+    .justificado {
+        width: 90%; /* Ajusta el ancho del contenedor */
     }
 }
 
 /* Media Queries para pantallas muy pequeñas (≤ 480px) */
 @media (max-width: 480px) {
     .navbar {
-        padding: 0.5rem; /* Reduce el padding */
+        padding: 0.5rem; /* Reduce aún más el padding */
     }
 
     nav ul li {
@@ -82,5 +120,13 @@ h1 {
 
     nav ul li a {
         font-size: 0.8rem; /* Reduce el tamaño de la fuente */
+    }
+
+    h1 {
+        font-size: 2.5rem; /* Reduce aún más el tamaño del título */
+    }
+
+    .justificado {
+        width: 95%; /* Ajusta el ancho del contenedor */
     }
 }
