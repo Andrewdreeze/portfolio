@@ -40,6 +40,21 @@ nav ul li a {
     font-size: 1rem;
 }
 
+h1 {
+    font-size: 5rem; /* Aumenta el tamaño del texto */
+    color: #ffffff; /* Color del texto (opcional) */
+    text-align: center; /* Centra el título (opcional) */
+    margin-top: 20px; /* Espaciado superior (opcional) */
+}
+
+.justificado {
+    text-align: justify; /* Justifica el texto */
+    width: 500px; /* Ancho del contenedor (ajusta según necesites) */
+    margin: 20px auto; /* Centra el párrafo en la pantalla */
+    line-height: 1.6; /* Espaciado entre líneas para mejorar la legibilidad */
+    font-family: Arial, sans-serif; /* Fuente clara */
+}
+
 /* Media Queries para pantallas pequeñas (≤ 768px) */
 @media (max-width: 768px) {
     .navbar {
