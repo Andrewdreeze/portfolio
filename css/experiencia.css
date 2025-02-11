@@ -13,7 +13,7 @@ body {
 
 .navbar {
     display: flex;
-    justify-content: space-between; /* Alinea el logo a la izquierda y el menú a la derecha */
+    justify-content: center; /* Alinea el logo y el menú */
     align-items: center;
     padding: 1rem 2rem;
     background-color: #1a1a1a;
@@ -21,11 +21,6 @@ body {
     top: 0;
     width: 100%;
     z-index: 1000;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
 }
 
 nav ul {
