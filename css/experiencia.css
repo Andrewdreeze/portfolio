@@ -82,8 +82,7 @@ h1 {
 @media (max-width: 768px) {
     .navbar {
         padding: 0.5rem 1rem; /* Reduce el padding en móviles */
-        flex-direction: column; /* Cambia la dirección del flexbox a columna */
-        align-items: flex-start; /* Alinea los elementos al inicio */
+        
     }
 
     nav ul {
@@ -93,14 +92,6 @@ h1 {
 
     nav ul li {
         margin: 0.5rem 0; /* Ajusta el margen entre elementos */
-    }
-
-    h1 {
-        font-size: 3rem; /* Reduce el tamaño del título */
-    }
-
-    .justificado {
-        width: 90%; /* Ajusta el ancho del contenedor */
     }
 }
 
@@ -117,10 +108,7 @@ h1 {
     nav ul li a {
         font-size: 0.8rem; /* Reduce el tamaño de la fuente */
     }
-
-    h1 {
-        font-size: 2.5rem; /* Reduce aún más el tamaño del título */
-    }
+    
 
     .justificado {
         width: 95%; /* Ajusta el ancho del contenedor */
