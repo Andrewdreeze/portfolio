@@ -82,44 +82,28 @@ h1 {
 @media (max-width: 768px) {
     .navbar {
         padding: 0.5rem 1rem; /* Reduce el padding en móviles */
-        flex-direction: row; /* Cambia la dirección del flexbox a fila */
-        align-items: center; /* Alinea los elementos al centro verticalmente */
-    }
-
-    nav ul {
-        flex-direction: row; /* Mantiene el menú en una fila */
-        align-items: center;
     }
 
     nav ul li {
-        margin: 0.5rem 0; /* Ajusta el margen entre elementos */
+        margin: 0 0.8rem; /* Reduce el margen entre elementos */
     }
 
-    .display-3 {
-        font-size: 3rem; /* Reduce el tamaño del título */
-    }
-
-    .justificado {
-        width: 90%; /* Ajusta el ancho del contenedor */
+    nav ul li a {
+        font-size: 0.9rem; /* Reduce el tamaño de la fuente */
     }
 }
 
 /* Media Queries para pantallas muy pequeñas (≤ 480px) */
 @media (max-width: 480px) {
     .navbar {
-        padding: 0.5rem; /* Reduce aún más el padding */
+        padding: 0.5rem; /* Reduce el padding */
     }
 
     nav ul li {
-        margin: 0.5rem 0; /* Ajusta el margen entre elementos */
+        margin: 0 0.5rem; /* Reduce aún más el margen entre elementos */
     }
 
     nav ul li a {
         font-size: 0.8rem; /* Reduce el tamaño de la fuente */
-    }
-    
-
-    .justificado {
-        width: 95%; /* Ajusta el ancho del contenedor */
     }
 }
