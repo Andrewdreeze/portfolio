@@ -77,56 +77,29 @@ nav ul li a {
     margin-top: 60px; /* Espacio para evitar solapamiento con la barra de navegación */
 }
 
-.projects-section h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #007BFF;
-}
-
-.project-index {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.project-card {
+.project-item {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
     background-color: #f9f9f9;
-    color: #1a1a1a;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 300px;
-    text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #1a1a1a; /* Cambia el color del texto para contraste */
 }
 
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-}
-
-.project-card h3 {
+.project-item h3 {
     margin-bottom: 10px;
     font-size: 1.5rem;
-    color: #007BFF;
+    color: #007BFF; /* Color destacado para el título */
 }
 
-.project-card p {
+.project-item p {
     font-size: 1rem;
     line-height: 1.6;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
-.project-card iframe {
-    width: 100%;
-    height: 300px;
-    border: none;
-    border-radius: 8px;
-    margin-top: 10px;
-}
-
-.project-card .btn {
+.btn {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 20px;
@@ -137,17 +110,36 @@ nav ul li a {
     transition: background-color 0.3s ease;
 }
 
-.project-card .btn:hover {
+.btn:hover {
     background-color: #0056b3;
+}
+
+iframe {
+    margin-top: 20px;
+    width: 100%;
+    height: 600px;
+    border: none;
+    border-radius: 8px;
 }
 
 /* Media Queries para pantallas pequeñas (≤ 768px) */
 @media (max-width: 768px) {
-    .project-card {
-        width: 100%;
+    .project-item {
+        padding: 15px;
     }
 
-    .project-card iframe {
-        height: 200px;
+    iframe {
+        height: 400px;
+    }
+}
+
+/* Media Queries para pantallas muy pequeñas (≤ 480px) */
+@media (max-width: 480px) {
+    .project-item h3 {
+        font-size: 1.2rem;
+    }
+
+    iframe {
+        height: 300px;
     }
 }
